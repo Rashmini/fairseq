@@ -44,6 +44,7 @@ class Binarizer:
             f.seek(offset)
             # next(f) breaks f.tell(), hence readline() must be used
             line = safe_readline(f)
+            #print("line:", line)
             while line:
                 if end > 0 and f.tell() > end:
                     break
@@ -64,6 +65,7 @@ class Binarizer:
                         append_eos=append_eos,
                         reverse_order=reverse_order,
                     )
+                    print("ids:", ids)
                 nseq += 1
                 ntok += len(ids)
                 consumer(ids)
