@@ -65,7 +65,7 @@ class Binarizer:
                         append_eos=append_eos,
                         reverse_order=reverse_order,
                     )
-                    print("ids:", ids)
+                    #print("ids:", ids)
                 nseq += 1
                 ntok += len(ids)
                 consumer(ids)
