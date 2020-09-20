@@ -691,6 +691,7 @@ class TransformerDecoder(FairseqIncrementalDecoder):
             alignment_layer,
             alignment_heads,
         )
+        print(prev_output_tokens)
 
     """
     A scriptable subclass of this class has an extract_features method and calls
