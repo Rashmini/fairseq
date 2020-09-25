@@ -647,6 +647,21 @@ class TransformerDecoder(FairseqIncrementalDecoder):
         src_lengths: Optional[Any] = None,
         return_all_hiddens: bool = False,
     ):
+
+        print("//////////////////////////////////////")
+        #print(prev_output_tokens)
+
+        l=prev_output_tokens.tolist()
+        array=l[0]
+        sentence=''
+        for i in range(len(array)):
+          if(array[i]!=1):
+            if(i!=len(array)-1):
+              sentence+=self.dictionary[array[i]]+" "
+            else:
+              sentence+=self.dictionary[array[i]]+"\n"
+        print(sentence)
+
         """
         Args:
             prev_output_tokens (LongTensor): previous decoder outputs of shape
