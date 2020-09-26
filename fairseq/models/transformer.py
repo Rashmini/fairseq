@@ -648,7 +648,7 @@ class TransformerDecoder(FairseqIncrementalDecoder):
         return_all_hiddens: bool = False,
     ):
 
-        print("//////////////////////////////////////")
+        """print("//////////////////////////////////////")
         #print(prev_output_tokens)
 
         l=prev_output_tokens.tolist()
@@ -660,7 +660,7 @@ class TransformerDecoder(FairseqIncrementalDecoder):
               sentence+=self.dictionary[array[i]]+" "
             else:
               sentence+=self.dictionary[array[i]]+"\n"
-        print(sentence)
+        print(sentence)"""
 
         """
         Args:
