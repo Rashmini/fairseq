@@ -233,6 +233,7 @@ class TransformerModel(FairseqEncoderDecoderModel):
         if path:
             embed_dict = utils.parse_embedding(path)
             utils.load_embedding(embed_dict, dictionary, emb)
+        print(dictionary)
         return emb
 
     @classmethod
