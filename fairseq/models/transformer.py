@@ -233,9 +233,9 @@ class TransformerModel(FairseqEncoderDecoderModel):
         if path:
             embed_dict = utils.parse_embedding(path)
             utils.load_embedding(embed_dict, dictionary, emb)
-        '''for i in range(0,10):
+        for i in range(0,10):
             print(dictionary[i])
-            print("********")'''
+            print("********")
         return emb
 
     @classmethod
